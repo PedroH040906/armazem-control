@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class ArmazenDTO {
+public class ArmazemDTO {
 
     private Long id;
 
