@@ -1,16 +1,12 @@
 package rutz.armazens.services;
 
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import rutz.armazens.domain.*;
 import rutz.armazens.dtos.SaldoDTO;
 import rutz.armazens.dtos.SaldoResponseDTO;
 import rutz.armazens.dtos.SaldoTranfeDTO;
 import rutz.armazens.dtos.SaldoUpdateDTO;
-import rutz.armazens.repository.ArmazenRepository;
+import rutz.armazens.repository.ArmazemRepository;
 import rutz.armazens.repository.HistoricoRepository;
 import rutz.armazens.repository.ProdutoRepository;
 import rutz.armazens.repository.SaldoRepository;
@@ -22,13 +18,13 @@ public class SaldoService {
 
     private final SaldoRepository repository;
     private final ProdutoRepository produtoRepository;
-    private final ArmazenRepository armazemRepository;
+    private final ArmazemRepository armazemRepository;
     private final HistoricoRepository historicoRepository;
 
-    public SaldoService(SaldoRepository repository, ProdutoRepository produtoRepository, ArmazenRepository armazenRepository, HistoricoRepository historicoRepository) {
+    public SaldoService(SaldoRepository repository, ProdutoRepository produtoRepository, ArmazemRepository armazemRepository, HistoricoRepository historicoRepository) {
         this.repository = repository;
         this.produtoRepository = produtoRepository;
-        this.armazemRepository = armazenRepository;
+        this.armazemRepository = armazemRepository;
         this.historicoRepository = historicoRepository;
     }
 

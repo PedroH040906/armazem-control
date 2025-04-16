@@ -4,8 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rutz.armazens.domain.Armazem;
+import rutz.armazens.dtos.ArmazemDTO;
 import rutz.armazens.dtos.ArmazemResponseDTO;
-import rutz.armazens.dtos.ArmazenDTO;
 import rutz.armazens.services.ArmazemService;
 
 import java.util.List;
@@ -21,9 +21,9 @@ public class ArmazemController {
     }
 
     @PostMapping
-    public ResponseEntity<ArmazemResponseDTO> criarArmazem(@RequestBody ArmazenDTO armazenDTO){
+    public ResponseEntity<ArmazemResponseDTO> criarArmazem(@RequestBody ArmazemDTO armazemDTO){
         try {
-            ArmazemResponseDTO response = service.criarArmazem(armazenDTO);
+            ArmazemResponseDTO response = service.criarArmazem(armazemDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).build();
